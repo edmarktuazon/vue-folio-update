@@ -1,5 +1,5 @@
 <script setup>
-import Resume from "../assets/docs/DevEd.pdf";
+import Resume from "../assets/docs/Edmark-updated-resume.pdf";
 import EdmarkImg from "../assets/images/ed.jpg";
 
 import { useMotion } from "@vueuse/motion";
