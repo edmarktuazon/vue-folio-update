@@ -84,9 +84,11 @@ const iccDesc =
 
 <template>
   <section
-    class="px-4 lg:px-0 bg-backupPrimary py-24 min-h-screen grid place-items-center dark:bg-white"
+    class="px-8 lg:px-0 bg-backupPrimary py-24 min-h-screen grid place-items-center dark:bg-white"
   >
-    <div class="w-full lg:max-w-[65%]">
+    <div
+      class="w-full px-0 xl:px-14 2xl:px-0 lg:w-full xl:max-w-[80%] 2xl:max-w-[60%]"
+    >
       <div class="portfolio-title flex justify-start items-center my-8 gap-3">
         <h3
           class="w-64 text-lightGray font-bold dark:text-backupSecondary text-4xl font-poppins mb-2"
@@ -120,7 +122,7 @@ const iccDesc =
               <div>
                 <div class="flex justify-start lg:justify-start">
                   <div class="flex justify-start items-center lg:justify-end">
-                    <h5 class="text-gray font-bold">Tech Used:</h5>
+                    <h5 class="text-gray font-bold">Tech used:</h5>
                   </div>
                 </div>
                 <ul
@@ -192,7 +194,7 @@ const iccDesc =
               <!-- tech  -->
               <div>
                 <div class="flex justify-start items-center lg:justify-end">
-                  <h5 class="text-gray font-bold">Tech Used:</h5>
+                  <h5 class="text-gray font-bold">Tech used:</h5>
                 </div>
                 <ul
                   class="block lg:flex gap-1 justify-start items-center lg:justify-end"
@@ -253,7 +255,7 @@ const iccDesc =
               <div>
                 <div class="flex justify-start lg:justify-start">
                   <div class="flex justify-start items-center lg:justify-end">
-                    <h5 class="text-gray font-bold">Tech Used:</h5>
+                    <h5 class="text-gray font-bold">Tech used:</h5>
                   </div>
                 </div>
                 <ul
@@ -327,7 +329,7 @@ const iccDesc =
               <!-- tech  -->
               <div>
                 <div class="flex justify-start items-center lg:justify-end">
-                  <h5 class="text-gray font-bold">Tech Used:</h5>
+                  <h5 class="text-gray font-bold">Tech used:</h5>
                 </div>
                 <ul
                   class="block lg:flex gap-1 justify-start items-center lg:justify-end"
@@ -383,7 +385,7 @@ const iccDesc =
               <div>
                 <div class="flex justify-start lg:justify-start">
                   <div class="flex justify-start items-center lg:justify-end">
-                    <h5 class="text-gray font-bold">Tech Used:</h5>
+                    <h5 class="text-gray font-bold">Tech used:</h5>
                   </div>
                 </div>
                 <ul

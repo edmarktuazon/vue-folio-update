@@ -31,17 +31,19 @@ const { facebook, instagram, linkedin, github } = toRefs(links);
   <section
     class="bg-backupPrimary h-screen flex justify-center items-center flex-col dark:bg-[#f1f1f1]"
   >
-    <div class="z-50 relative px-4 lg:px-0 w-full lg:max-w-[60%]">
+    <div
+      class="z-50 relative px-8 xl:px-14 2xl:px-0 w-full lg:w-full xl:max-w-[80%] 2xl:max-w-[60%]"
+    >
       <div ref="targetEl_headings">
         <h4
           class="text-lightGray dark:text-backupSecondary font-poppins tracking-wide text-xl font-medium"
         >
-          Greetings! I'm
+          Greetings, I'm
         </h4>
         <h1
           class="heading-h1 font-poppins font-bold text-gray dark:text-backupSecondary my-2 tracking-wide"
         >
-          Edmark Tuazon. <br />
+          Edmark Tuazon<br />
           <span class="text-lightBlue">I build things for the web.</span>
         </h1>
         <h3
@@ -56,7 +58,7 @@ const { facebook, instagram, linkedin, github } = toRefs(links);
         <h3
           class="text-lightGray dark:text-backupSecondary text-sm font-poppins mb-2"
         >
-          connect with me
+          Connect with me
         </h3>
         <div class="icons-container flex justify-start items-center gap-3">
           <a :href="facebook" target="_blank">
@@ -78,7 +80,7 @@ const { facebook, instagram, linkedin, github } = toRefs(links);
 </template>
 <style scoped>
 .heading-h1 {
-  font-size: clamp(2.3rem, 0.3231rem + 7.2034vw, 4.375rem);
+  font-size: clamp(3rem, 0.3231rem + 7.2034vw, 4.375rem);
   line-height: 1.1;
 }
 
