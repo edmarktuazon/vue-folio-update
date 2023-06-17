@@ -74,11 +74,20 @@ const skillList = reactive({
       id: 12,
       name: "Adobe XD",
     },
+    {
+      id: 13,
+      name: "Data Encoding",
+    },
+    {
+      id: 14,
+      name: "Content Writing",
+    },
   ],
 });
 
-const description =
-  "I' am self-taught, freelance/part-time Frontend Web Developer based in Cavite, Philippines I specialized in Frontend Web Development. I'm focus on creating responsive, and user-friendly websites, I use the latest frontend technologies to bring my client visions to project. I'm dedicated to providing good quality solutions that meet the needs and goals of my clients, as a self-taught Frontend Web Developer, I honed my skills through continuous learning and exploring.";
+const description = `I am a self-taught Frontend Web Developer from Cavite, Philippines, specializing in responsive and user-friendly Websites. My goal is to provide high-quality solutions tailored to my clients' needs. As a self-taught Developer, I am dedicated to continual growth and improvement, constantly enhancing my skills through ongoing learning.\n\nBesides Web Development, I also work as a Freelance Virtual Assistant, handling tasks such as Data Encoding, SEO and Content Writing. This diverse experience allows me to explore new opportunities beyond web development.`;
+
+const formattedDescription = description.replace(/\n/g, "<br>");
 </script>
 <template>
   <section
@@ -105,7 +114,7 @@ const description =
             <a
               :href="CV"
               target="_blank"
-              class="text-lightGray font-poppins p-2 text-sm rounded-lg mt-8 text-center hover:bg-lightGray hover:text-white border-lightGray border-2"
+              class="text-lightGray font-poppins p-2 rounded-lg mt-8 text-center text-sm hover:bg-lightGray hover:text-white border-lightGray border"
             >
               <font-awesome-icon icon="fa-solid fa-file" /> &nbsp;View my CV
             </a>
@@ -113,15 +122,14 @@ const description =
         </figure>
         <div class="relative lg:mt-0 col-span-1 xl:col-span-2 row-start-1">
           <p
-            class="font-poppins text-lightGray leading-7 text-start lg:text-justify"
+            class="font-poppins text-lightGray leading-7"
             ref="targetEl_info"
-          >
-            {{ description }}
-          </p>
+            v-html="formattedDescription"
+          ></p>
           <h3
             class="text-2xl font-bold text-gray mt-6 mb-4 dark:text-backupSecondary capitalize"
           >
-            my tech stacks:
+            my proficiencies:
           </h3>
           <ul
             ref="targetEl_ul"

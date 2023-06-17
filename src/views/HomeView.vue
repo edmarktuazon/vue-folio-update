@@ -38,7 +38,7 @@ const { facebook, instagram, linkedin, github } = toRefs(links);
         <h4
           class="text-lightGray dark:text-backupSecondary font-poppins tracking-wide text-xl font-medium"
         >
-          Greetings, I'm
+          Hey, I'm
         </h4>
         <h1
           class="heading-h1 font-poppins font-bold text-gray dark:text-backupSecondary my-2 tracking-wide"
@@ -49,16 +49,16 @@ const { facebook, instagram, linkedin, github } = toRefs(links);
         <h3
           class="heading-h3 font-poppins text-lightGray dark:text-backupSecondary tracking-wide text-lg"
         >
-          I' am Freelancer, part-timer and self-taught front-end
-          <br class="hidden sm:flex" />web developer based in Cavite,
-          Philippines
+          I'm a skilled and resourceful front-end web
+          <br class="hidden sm:flex" />
+          developer based in Cavite, Philippines
         </h3>
       </div>
       <div class="mt-16">
         <h3
           class="text-lightGray dark:text-backupSecondary text-sm font-poppins mb-2"
         >
-          Connect with me
+          Connect with Me
         </h3>
         <div class="icons-container flex justify-start items-center gap-3">
           <a :href="facebook" target="_blank">
