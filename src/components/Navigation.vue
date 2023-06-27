@@ -22,6 +22,14 @@ const toggleMenu = () => {
 // toggle dark mode
 // const isDark = useDark();
 // const toggleDark = useToggle(isDark);
+
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+    console.log(section);
+  }
+};
 </script>
 
 <template>
@@ -49,6 +57,7 @@ const toggleMenu = () => {
           <li>
             <a
               href="#"
+              @click="scrollToSection('about')"
               class="nav-links font-medium text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
               >{{ about }}</a
             >

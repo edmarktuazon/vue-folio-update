@@ -3,7 +3,13 @@ import CV from "../assets/docs/Edmark-updated-CV.pdf";
 import EdmarkImg from "../assets/images/ed.jpg";
 
 import { useMotion } from "@vueuse/motion";
-import { reactive, ref } from "vue";
+import { defineComponent, reactive, ref } from "vue";
+
+import NavMenu from "../components/Navigation.vue";
+
+defineComponent({
+  NavMenu,
+});
 
 // motion
 const targetEl_info = ref();
@@ -91,6 +97,7 @@ const formattedDescription = description.replace(/\n/g, "<br>");
 </script>
 <template>
   <section
+    id="about"
     class="bg-backupPrimary py-24 min-h-screen grid place-items-center dark:bg-white"
   >
     <div
