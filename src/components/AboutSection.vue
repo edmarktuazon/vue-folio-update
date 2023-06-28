@@ -91,8 +91,7 @@ const skillList = reactive({
   ],
 });
 
-const description = `I am a self-taught Frontend Web Developer from Cavite, Philippines. With a strong focus on developing responsive and user-friendly
-websites. My main objective is to deliver top-notch solutions that meet my clients' specific requirements.\n\n As a dedicated self-learner, I am committed to constant learning and improvement, always striving to enhance my skills. In addition to web development, I have experience as a Freelance Virtual Assistant, where I worked on tasks like data encoding and content writing. This diverse background opens up exciting possibilities for me to explore beyond just web development.
+const description = `I am a self-taught Frontend Web Developer from Cavite, Philippines. With a strong focus on developing responsive and user-friendly websites. My main objective is to deliver top-notch solutions that meet my clients' specific requirements.\n\n As a dedicated self-learner, I am committed to constant learning and improvement, always striving to enhance my skills. In addition to web development, I have experience as a Freelance Virtual Assistant, where I worked on tasks like data encoding and content writing. This diverse background opens up exciting possibilities for me to explore beyond just web development.
 `;
 
 const formattedDescription = description.replace(/\n/g, "<br>");
