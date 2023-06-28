@@ -1,5 +1,5 @@
 <script setup>
-import CV from "../assets/docs/Edmark-updated-CV.pdf";
+import CV from "../assets/docs/EDMARK_TUAZON_CV.pdf";
 import EdmarkImg from "../assets/images/ed.jpg";
 
 import { useMotion } from "@vueuse/motion";
@@ -91,7 +91,9 @@ const skillList = reactive({
   ],
 });
 
-const description = `I am a self-taught Frontend Web Developer from Cavite, Philippines, specializing in responsive and user-friendly Websites. My goal is to provide high-quality solutions tailored to my clients' needs. As a self-taught Developer, I am dedicated to continual growth and improvement, constantly enhancing my skills through ongoing learning.\n\nBesides Web Development, I also work as a Freelance Virtual Assistant, handling tasks such as Data Encoding, SEO and Content Writing. This diverse experience allows me to explore new opportunities beyond web development.`;
+const description = `I am a self-taught Frontend Web Developer from Cavite, Philippines. With a strong focus on developing responsive and user-friendly
+websites. My main objective is to deliver top-notch solutions that meet my clients' specific requirements.\n\n As a dedicated self-learner, I am committed to constant learning and improvement, always striving to enhance my skills. In addition to web development, I have experience as a Freelance Virtual Assistant, where I worked on tasks like data encoding and content writing. This diverse background opens up exciting possibilities for me to explore beyond just web development.
+`;
 
 const formattedDescription = description.replace(/\n/g, "<br>");
 </script>
