@@ -5,8 +5,10 @@ import router from "./router";
 
 // font awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
+
 import {
   faCheck,
+  faCode,
   faFile,
   faMoon,
   faPaperPlane,
@@ -19,6 +21,7 @@ library.add(faFile);
 library.add(faPaperPlane);
 library.add(faSun);
 library.add(faMoon);
+library.add(faCode);
 
 // motion plugin
 import { MotionPlugin } from "@vueuse/motion";

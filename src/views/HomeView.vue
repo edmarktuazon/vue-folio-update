@@ -36,29 +36,30 @@ const { facebook, instagram, linkedin, github } = toRefs(links);
     >
       <div ref="targetEl_headings">
         <h4
-          class="text-lightGray dark:text-backupSecondary font-poppins tracking-wide text-xl font-medium"
+          class="text-lightGray dark:text-backupSecondary tracking-wide text-xl"
         >
           Hey, I'm
         </h4>
         <h1
-          class="heading-h1 font-poppins font-bold text-gray dark:text-backupSecondary my-2 tracking-wide"
+          class="heading-h1 font-bold text-gray dark:text-backupSecondary my-4 tracking-wide"
         >
           Edmark Tuazon<br />
           <span class="text-lightBlue">I build things for the web.</span>
         </h1>
         <h3
-          class="heading-h3 font-poppins text-lightGray dark:text-backupSecondary tracking-wide text-lg"
+          class="heading-h3 text-lightGray dark:text-backupSecondary tracking-wide text-lg"
         >
-          I'm a skilled and resourceful front-end web
+          A Frontend Web Developer with a background in HTML, CSS, and
+          JavaScript.
           <br class="hidden sm:flex" />
-          developer based in Cavite, Philippines
+          I have hands-on experience in building visually appealing responsive
+          websites, <br class="hidden sm:flex" />
+          ensuring smooth user experiences across multiple platforms.
         </h3>
       </div>
       <div class="mt-16">
-        <h3
-          class="text-lightGray dark:text-backupSecondary text-sm font-poppins mb-2"
-        >
-          Connect with Me
+        <h3 class="text-lightGray dark:text-backupSecondary text-sm mb-2">
+          connect with me
         </h3>
         <div class="icons-container flex justify-start items-center gap-3">
           <a :href="facebook" target="_blank">
@@ -95,12 +96,4 @@ const { facebook, instagram, linkedin, github } = toRefs(links);
   height: 1px;
   background-color: rgb(32, 32, 32);
 }
-/* .icons-container::before {
-  content: "";
-  display: block;
-  max-width: 150px;
-  width: 100%;
-  height: 1px;
-  background-color: rgb(32, 32, 32);
-} */
 </style>

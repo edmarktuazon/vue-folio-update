@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import { reactive, toRefs } from "vue";
+import { reactive, ref, toRefs } from "vue";
 import CertImg from "../assets/images/OJT-Cert_Tuazon-Edmark.png";
 
 // dynamic nav links
@@ -13,21 +13,17 @@ const navLinks = reactive({
 });
 const { home, about, portfolio, certificate, contact } = toRefs(navLinks);
 
-// hamburger menu
+const isMenuVisible = ref(false);
+const sections = ref({}); // Holds references to sections
+
 const toggleMenu = () => {
-  const navMenu = document.getElementById("nav-menus");
-  navMenu.classList.toggle("isShow");
+  isMenuVisible.value = !isMenuVisible.value;
 };
 
-// toggle dark mode
-// const isDark = useDark();
-// const toggleDark = useToggle(isDark);
-
 const scrollToSection = (sectionId) => {
-  const section = document.getElementById(sectionId);
+  const section = sections.value[sectionId];
   if (section) {
     section.scrollIntoView({ behavior: "smooth" });
-    console.log(section);
   }
 };
 </script>
@@ -39,56 +35,64 @@ const scrollToSection = (sectionId) => {
         class="flex justify-between md:justify-around items-center py-6 lg:mx-0"
       >
         <a href="/" class="z-50">
-          <span class="text-lightBlue font-bold text-2xl font-poppins"
-            >Edmark.</span
-          >
+          <span class="text-lightBlue font-bold text-2xl">ET</span>
         </a>
         <ul
-          class="nav-menu hidden md:flex gap-8 items-center font-poppins"
-          id="nav-menus"
+          :class="[
+            'nav-menu',
+            'md:flex',
+            'gap-8',
+            'items-center',
+            { hidden: !isMenuVisible },
+          ]"
         >
           <li>
             <a
               href="#"
-              class="nav-links font-medium text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
-              >{{ home }}</a
+              class="nav-links text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
             >
+              {{ home }}
+            </a>
           </li>
           <li>
             <a
-              href="#"
-              @click="scrollToSection('about')"
-              class="nav-links font-medium text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
-              >{{ about }}</a
+              href="#about"
+              @click.prevent="scrollToSection('about')"
+              class="nav-links text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
             >
+              {{ about }}
+            </a>
           </li>
           <li>
             <a
-              href="#"
-              class="nav-links font-medium text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
-              >{{ portfolio }}</a
+              href="#portfolio"
+              @click.prevent="scrollToSection('portfolio')"
+              class="nav-links text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
             >
+              {{ portfolio }}
+            </a>
           </li>
           <li>
             <a
               :href="CertImg"
               target="_blank"
-              class="nav-links font-medium text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
-              >{{ certificate }}</a
+              class="nav-links text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
             >
+              {{ certificate }}
+            </a>
           </li>
           <li>
             <a
               href="mailto:edmarktuazon03@gmail.com"
-              class="nav-links font-medium text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
-              >{{ contact }}</a
+              class="nav-links text-gray dark:text-backupSecondary hover:text-lightBlue ease-out duration-300 tracking-wide"
             >
+              {{ contact }}
+            </a>
           </li>
         </ul>
-        <!-- hamburger-->
         <div
           class="md:hidden hamburger-menu mobile-menu-button cursor-pointer z-50"
-          @click="toggleMenu()"
+          @click="toggleMenu"
         >
           <span class="block mx-0 bg-secondary h-[2px] w-5 rounded-full"></span>
           <span
@@ -96,24 +100,6 @@ const scrollToSection = (sectionId) => {
           ></span>
           <span class="block mx-0 bg-secondary h-[2px] w-5 rounded-full"></span>
         </div>
-        <!-- <div>
-          <input
-            type="checkbox"
-            class="checkbox opacity-0 absolute"
-            id="checkbox"
-            @click="toggleDark()"
-          />
-          <label
-            for="checkbox"
-            class="label bg-backupSecondary flex items-center justify-between relative rounded-full w-14 p-2 h-[26px]"
-          >
-            <font-awesome-icon icon="fa-solid fa-moon" class="text-yellow" />
-            <font-awesome-icon icon="fa-solid fa-sun" class="text-yellow" />
-            <div
-              class="switch bg-white rounded-full absolute top-[2px] left-[6px] w-[22px] h-[22px] transition-transform"
-            ></div>
-          </label>
-        </div> -->
       </div>
     </nav>
   </header>

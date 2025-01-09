@@ -38,64 +38,42 @@ const skillList = reactive({
     },
     {
       id: 2,
-      name: "JavaScript",
-    },
-    {
-      id: 3,
-      name: "GIT",
-    },
-    {
-      id: 4,
       name: "CSS3(SASS)",
     },
     {
-      id: 5,
-      name: "VueJS",
-    },
-    {
-      id: 6,
-      name: "GitHub",
-    },
-    {
-      id: 7,
+      id: 3,
       name: "Tailwind CSS",
     },
     {
+      id: 4,
+      name: "Bootstrap",
+    },
+    {
+      id: 5,
+      name: "Javascript",
+    },
+    {
+      id: 6,
+      name: "Vue JS",
+    },
+    {
+      id: 6,
+      name: "Git",
+    },
+    {
+      id: 7,
+      name: "GitHub",
+    },
+    {
       id: 8,
-      name: "Fundamental jQuery, TS, PHP",
+      name: "Go Daddy",
     },
     {
       id: 9,
-      name: "Figma",
-    },
-    {
-      id: 10,
-      name: "Bootstrap 4/5",
-    },
-    {
-      id: 11,
-      name: "Fundamental Java, C++, VB",
-    },
-    {
-      id: 12,
-      name: "Adobe XD",
-    },
-    {
-      id: 13,
-      name: "Data Encoding",
-    },
-    {
-      id: 14,
-      name: "Content Writing",
+      name: "Hostinger",
     },
   ],
 });
-
-const description = `I am a self-taught Frontend Web Developer from Cavite, Philippines. With a strong focus on developing responsive and user-friendly websites. My main objective is to deliver top-notch solutions that meet my clients' specific requirements. \n\n As a dedicated self-learner, I am committed to constant learning and improvement, always striving to enhance my skills. In addition to web development, I have experience as a Freelance Virtual Assistant, where I worked on tasks like Data Encoding, SEO and
-Content Writing. This diverse background opens up exciting possibilities for me to explore beyond just web development.
-`;
-
-const formattedDescription = description.replace(/\n/g, "<br>");
 </script>
 <template>
   <section
@@ -107,9 +85,9 @@ const formattedDescription = description.replace(/\n/g, "<br>");
     >
       <div class="about-title flex justify-start items-center my-8 gap-3">
         <h3
-          class="w-64 text-lightGray font-bold dark:text-backupSecondary text-4xl font-poppins mb-2 whitespace-nowrap"
+          class="text-lightGray font-bold dark:text-backupSecondary text-4xl mb-2 whitespace-wrap lg:whitespace-nowrap"
         >
-          About me
+          Technologies I've been working
         </h3>
       </div>
       <div class="grid gap-10 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 m-auto">
@@ -123,33 +101,31 @@ const formattedDescription = description.replace(/\n/g, "<br>");
             <a
               :href="CV"
               target="_blank"
-              class="text-lightGray font-poppins p-2 rounded-lg mt-8 text-center text-sm hover:bg-lightGray hover:text-white border-lightGray border"
+              class="text-lightGray p-2 rounded-lg mt-8 text-center text-sm hover:bg-lightGray hover:text-white border-lightGray border"
             >
               <font-awesome-icon icon="fa-solid fa-file" /> &nbsp;View my CV
             </a>
           </div>
         </figure>
         <div class="relative lg:mt-0 col-span-1 xl:col-span-2 row-start-1">
-          <p
-            class="font-poppins text-lightGray leading-7"
-            ref="targetEl_info"
-            v-html="formattedDescription"
-          ></p>
-          <h3
-            class="text-2xl font-bold text-gray mt-6 mb-4 dark:text-backupSecondary capitalize"
-          >
-            my proficiencies:
-          </h3>
+          <p class="text-lightGray leading-7 mb-8">
+            I have experience building responsive, dynamic websites using modern
+            frontend technologies such as HTML5, CSS3 (SASS), JavaScript, and
+            VueJS. I utilize version control with Git and GitHub, and employ
+            frameworks like Tailwind CSS and Bootstrap for efficient UI
+            development. Additionally, I have managed web hosting and domain
+            services through platforms like GoDaddy and Hostinger, ensuring
+            seamless deployment and website performance.
+          </p>
           <ul
             ref="targetEl_ul"
-            class="grid grid-cols-2 sm:grid-cols-3 gap-0 sm:gap-1 items-center text-lightGray font-poppins leading-7"
+            class="grid grid-cols-2 sm:grid-cols-3 gap-0 sm:gap-1 items-center text-lightGray leading-7"
           >
             <li
               class="leading-7 text-sm"
               v-for="skills in skillList.frontendSkills"
               :key="skills.id"
             >
-              <font-awesome-icon icon="check" class="text-lightBlue" />
               {{ skills.name }}
             </li>
           </ul>
@@ -161,10 +137,15 @@ const formattedDescription = description.replace(/\n/g, "<br>");
 
 <style scoped>
 .about-title::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: rgb(32, 32, 32);
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .about-title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(32, 32, 32);
+  }
 }
 </style>
