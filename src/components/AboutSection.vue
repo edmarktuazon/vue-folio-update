@@ -1,5 +1,5 @@
 <script setup>
-import CV from "../assets/docs/EDMARK_TUAZON_CV.pdf";
+import CV from "../assets/docs/edmarktuazon-cv.pdf";
 import EdmarkImg from "../assets/images/ed.jpg";
 
 import { useMotion } from "@vueuse/motion";
@@ -103,7 +103,8 @@ const skillList = reactive({
               target="_blank"
               class="text-lightGray p-2 rounded-lg mt-8 text-center text-sm hover:bg-lightGray hover:text-white border-lightGray border"
             >
-              <font-awesome-icon icon="fa-solid fa-file" /> &nbsp;View my CV
+              <font-awesome-icon icon="fa-solid fa-file" /> &nbsp;Take a Peek at
+              My CV
             </a>
           </div>
         </figure>
