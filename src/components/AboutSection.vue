@@ -101,7 +101,7 @@ const skillList = reactive({
             <a
               :href="CV"
               target="_blank"
-              class="text-lightGray p-2 rounded-lg mt-8 text-center text-sm hover:bg-lightGray hover:text-white border-lightGray border"
+              class="w-full whitespace-nowrap text-lightGray p-2 rounded-lg mt-8 text-center text-sm hover:bg-lightGray hover:text-white border-lightGray border"
             >
               <font-awesome-icon icon="fa-solid fa-file" /> &nbsp;Take a Peek at
               My CV
