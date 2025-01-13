@@ -31,9 +31,7 @@ const scrollToSection = (sectionId) => {
 <template>
   <header class="top-0 fixed w-full bg-primary dark:bg-[#f1f1f1] z-[999]">
     <nav class="px-8 xl:px-36">
-      <div
-        class="flex justify-between md:justify-around items-center py-6 lg:mx-0"
-      >
+      <div class="flex justify-between items-center py-6 lg:mx-0">
         <a href="/" class="z-50">
           <span class="text-lightBlue font-bold text-2xl">ET</span>
         </a>
